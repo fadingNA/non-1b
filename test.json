@@ -1,0 +1,16 @@
+{
+    "name": "web_search",
+    "description": "search weather in canada data",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "search_keyword": {
+          "type": "string",
+          "description": "get the data of forecast of historical in canada"
+        }
+      },
+      "required": [
+        "search_keyword"
+      ]
+    }
+  }
