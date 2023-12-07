@@ -61,7 +61,7 @@ for i in range(0, 5):
 
 """
 Question 1: How do I use my multiple linear regression model to make a single prediction, 
-for example, the profit of a startup with R&D Spend = 160000, Administration Spend = 130000,
+for example, the profit of a startup with R&D Spend = 160000, Administratio nn Spend = 130000,
  Marketing Spend = 300000 and State = California?
 
 Question 2: How do I get the final regression equation y = b0 + b1 x1 + b2 x2 + ... 
