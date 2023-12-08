@@ -16,26 +16,40 @@ relevant_columns = [
     'UTC_DATE', 'DEW_POINT_TEMP', 'RELATIVE_HUMIDITY', 'PRECIP_AMOUNT'
 ]
 
-df_cleaned = df[relevant_columns].copy()
-
-if all(df_cleaned['id'].astype(str) == df_cleaned['id'].astype(str)):
-    df_cleaned.drop('id', axis=1, inplace=True)
-
-
-for column in df_cleaned.select_dtypes(include=['object']).columns:
-    if column in ['WINDCHILL', 'HUMIDEX', 'VISIBILITY', 'WIND_SPEED', 'PRECIP_AMOUNT']:
-        df_cleaned[column] = pd.to_numeric(df_cleaned[column], errors='coerce')
-
-# Final check of the cleaned DF
-
-print(df_cleaned.info(), " | " , df_cleaned.head())
-
-def clean_dataframe(file_path, relevant_column):
-    df = pd.read_csv(file_path)
-    df = df[relevant_column]
+# Define a function to clean individual DataFrames
+def clean_dataframe(file_path, relevant_columns):
+    df = pd.read_csv(file_path, low_memory=False)
+    df = df[relevant_columns]
+    
+    # Convert columns that should be numeric
     numeric_columns = ['WINDCHILL', 'HUMIDEX', 'VISIBILITY', 'WIND_SPEED', 'PRECIP_AMOUNT']
     for column in numeric_columns:
         df[column] = pd.to_numeric(df[column], errors='coerce')
+    
     return df
 
-combined_df = df_cleaned.copy()
+# List of your CSV files
+csv_files = [
+    './data/weather_data2016.csv',
+    './data/weather_data2017.csv',
+    './data/weather_data2018.csv',
+    './data/weather_data2019.csv',
+    './data/weather_data2020.csv',
+    './data/weather_data2021.csv',
+    './data/weather_data2022.csv',
+    './data/weather_data2023.csv'
+]
+
+# Load the first CSV file and clean it
+combined_df = clean_dataframe(csv_files[0], relevant_columns)
+
+# Iterate over the rest of the files, clean, and combine them into combined_df
+for file_path in csv_files[1:]:
+    cleaned_df = clean_dataframe(file_path, relevant_columns)
+    combined_df = pd.concat([combined_df, cleaned_df], ignore_index=True)
+
+# Save the combined DataFrame to a new CSV file
+combined_df.to_csv('./data/combined_weather_data.csv', index=False)
+
+# Print DataFrame information and head for verification
+print(combined_df.info(), combined_df.head())
