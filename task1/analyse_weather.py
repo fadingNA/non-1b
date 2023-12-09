@@ -18,6 +18,4 @@ winter_storm_days = combined_df[(combined_df['type'] == 'snow') & (
 rainny_storm = combined_df[(combined_df['type'] == 'rain') & (combined_df['PRECIP_AMOUNT'] >= RAIN_PRECIP_THRESHOLD)]
 
 
-
-
 print(f"Number of severe wind days: {severe_wind_days.shape[0]}")
