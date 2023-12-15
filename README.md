@@ -37,3 +37,8 @@ jupyter notebook covid-folium.ipynb
 
 - as we can see the data from toronto_police the accident kill and serious injury is around downtown toronto and mostly occur on the intersection.
 
+![Screenshot 2023-12-15 at 11 36 29 AM](https://github.com/fadingNA/non-1b/assets/94852295/a297987e-00d9-4bb8-963b-c30a6baadb85)
+![Screenshot 2023-12-15 at 11 36 26 AM](https://github.com/fadingNA/non-1b/assets/94852295/328e08ef-8d96-48cd-9ab0-edccc083bd52)
+![Screenshot 2023-12-15 at 11 36 23 AM](https://github.com/fadingNA/non-1b/assets/94852295/5255f6be-71d8-4983-8f1c-533941eb36c4)
+![Screenshot 2023-12-15 at 11 36 20 AM](https://github.com/fadingNA/non-1b/assets/94852295/bdc981cf-67de-4c08-9bb2-a69488ae9753)
+![Screenshot 2023-12-15 at 11 36 16 AM](https://github.com/fadingNA/non-1b/assets/94852295/754d0b13-e8a4-479b-8242-71a2b765ad8a)
