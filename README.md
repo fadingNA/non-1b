@@ -44,3 +44,5 @@ jupyter notebook covid-folium.ipynb
 ![Screenshot![Screenshot 2023-12-15 at 11 42 37 AM](https://github.com/fadingNA/non-1b/assets/94852295/eb3293d5-a80a-4b75-9f36-5adfa37e1f28)
  2023-12-15 at 11 36 16 AM](https://github.com/fadingNA/non-1b/assets/94852295/754d0b13-e8a4-479b-8242-71a2b765ad8a)
 
+![Screenshot 2023-12-15 at 11 42 37 AM](https://github.com/fadingNA/non-1b/assets/94852295/5ea37217-7c5e-4624-8ec8-0cf4a144da54)
+
